@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: center; /* Optional: Center the cards horizontally */
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent card wrapping to the next line */
+    overflow-x: auto; /* Add horizontal scrollbar if necessary */
+
+  }
+  
+  /* Optional: Adjust spacing between cards */
+  .cards-container > * {
+    margin: 20px; /* Adjust the margin as needed for spacing */
+  }
+  

@@ -1,0 +1,19 @@
+h3{
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: center;
+    font-family: none;
+    font-weight: revert;
+}
+.card{
+    font-family: none;
+}
+.card-body{
+    display: flex;
+    justify-content: space-between;
+}
+.card-text:last-child {
+    margin: 0rem 1rem 2rem;
+    font-family: none;
+    font-size: 22px;
+}

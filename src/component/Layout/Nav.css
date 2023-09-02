@@ -1,0 +1,35 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    color: white;
+    justify-content: space-around;
+}
+.navbar-brand{
+    color: white;
+    margin-left: 30px;
+}
+.navbar > .container{
+    justify-content: end;
+    border: 2px solid gray;
+    width: 34rem;
+}
+
+.container:hover{
+    transform: scale(1);
+    color: green;
+}
+
+#count{
+    margin-left: 20px;
+    padding: 9px;
+    background-color: #d81313;
+    border-radius: 50%;
+}
+
+.btn{
+    font-family: none;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: yellowgreen;
+}
