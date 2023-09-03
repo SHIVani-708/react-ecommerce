@@ -15,7 +15,7 @@ export default function Nav() {
           <Navbar.Brand href="#About">About</Navbar.Brand>
         </Link>
         <Link to="/store">
-          <Navbar.Brand href="#About">Store</Navbar.Brand>
+          <Navbar.Brand href="#store">Store</Navbar.Brand>
         </Link>
       </div>
       <div>
