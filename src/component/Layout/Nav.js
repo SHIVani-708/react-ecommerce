@@ -17,6 +17,10 @@ export default function Nav() {
         <Link to="/store">
           <Navbar.Brand href="#store">Store</Navbar.Brand>
         </Link>
+        <Link to="/api-store">
+          <Navbar.Brand href="#store">ApiStore</Navbar.Brand>
+        </Link>
+        
       </div>
       <div>
         <CartButton />

@@ -9,6 +9,7 @@ import About from "./component/Files/About";
 import Home from "./component/Files/Home";
 import Footer from "./component/Layout/Footer";
 import Store from "./component/Files/Store";
+import ApiStore from "./component/Files/StoreAPI"
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -24,10 +25,10 @@ function App() {
         {cartIsShown && <Cart onHideCart={HideCartHandler} />}
         <Nav onShowCart={showCartHandler} />
         <Routes>
-          {" "}
-          <Route path="/about" element={<About />} />{" "}
-          <Route path="/" element={<Home />} />
-          <Route path="/store" element={<Store />} />
+          {" "}<Route path="/about" element={<About />} />
+          {" "}<Route path="/" element={<Home />} />
+          {" "}<Route path="/store" element={<Store />} />
+          {" "}<Route path="/api-store" element={<ApiStore />} />
         </Routes>
         <Footer />
       </CartProvider>
