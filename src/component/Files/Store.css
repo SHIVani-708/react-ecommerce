@@ -1,0 +1,12 @@
+.tour{
+    font-size: 4rem;
+    font-family: none;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin: 2rem;
+}
+
+tbody{
+    margin: 4rem;
+}

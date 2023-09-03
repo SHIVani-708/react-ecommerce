@@ -9,6 +9,11 @@
     color: white;
     margin-left: 30px;
 }
+.navbar-brand:hover{
+    font-size: 35px;
+    color: yellowgreen;
+    font-weight: bold;
+}
 .navbar > .container{
     justify-content: end;
     border: 2px solid gray;

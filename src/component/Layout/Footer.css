@@ -1,0 +1,22 @@
+/* Footer.css */
+.footer-container {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.f-text {
+    font-size: 3rem;
+    font-family: none;
+}
+
+.f-link {
+    display: flex;
+    justify-content: space-around;
+    width: 24rem;
+    font-size: 3rem;
+}

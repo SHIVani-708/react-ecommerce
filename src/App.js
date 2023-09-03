@@ -1,25 +1,37 @@
-import { useState } from "react";
+import {useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// Import BrowserRouter, Routes, and Route
 import "./App.css";
-import Items from "./component/Items/Items";
 import Nav from "./component/Layout/Nav";
 import Cart from "./component/Cart/Cart";
 import CartProvider from "./component/Store/CartProvider";
+import About from "./component/Files/About";
+import Home from "./component/Files/Home";
+import Footer from "./component/Layout/Footer";
+import Store from "./component/Files/Store";
 
 function App() {
-  const [cartIsShown,setCartIsShown]=useState(false);
-  const showCartHandler=()=>{
+  const [cartIsShown, setCartIsShown] = useState(false);
+  const showCartHandler = () => {
     setCartIsShown(true);
-  }
-  const HideCartHandler=()=>{
+  };
+  const HideCartHandler = () => {
     setCartIsShown(false);
-  }
+  };
   return (
-    <CartProvider>
-      {cartIsShown && <Cart onHideCart={HideCartHandler}/>}
-      <Nav onShowCart={showCartHandler}/>
-      <h1 className="generics">The Generics</h1>
-      <Items/>
-    </CartProvider>
+    <Router>
+      <CartProvider>
+        {cartIsShown && <Cart onHideCart={HideCartHandler} />}
+        <Nav onShowCart={showCartHandler} />
+        <Routes>
+          {" "}
+          <Route path="/about" element={<About />} />{" "}
+          <Route path="/" element={<Home />} />
+          <Route path="/store" element={<Store />} />
+        </Routes>
+        <Footer />
+      </CartProvider>
+    </Router>
   );
 }
 
