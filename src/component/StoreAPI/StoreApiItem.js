@@ -6,6 +6,8 @@ function StoreApiItem(props) {
       <td>{props.id}</td>
       <td>{props.date}</td>
       <td>{props.title}</td>
+      
+      <td>{props.description}</td>
     </tr>
   );
 }

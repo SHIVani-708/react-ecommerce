@@ -9,7 +9,7 @@ export default function Nav() {
     <Navbar expand="lg" className="navbar nav">
       <div>
         <Link to="/">
-          <Navbar.Brand href="#home">Home</Navbar.Brand>
+          <Navbar.Brand >Home</Navbar.Brand>
         </Link>
         <Link to="/about">
           <Navbar.Brand href="#About">About</Navbar.Brand>
@@ -18,7 +18,10 @@ export default function Nav() {
           <Navbar.Brand href="#store">Store</Navbar.Brand>
         </Link>
         <Link to="/api-store">
-          <Navbar.Brand href="#store">Movies</Navbar.Brand>
+          <Navbar.Brand href="#api-store">Movies</Navbar.Brand>
+        </Link>
+        <Link to="/contactus">
+          <Navbar.Brand href="#store">ContactUs</Navbar.Brand>
         </Link>
         
       </div>

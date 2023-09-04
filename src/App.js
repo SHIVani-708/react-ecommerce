@@ -9,7 +9,8 @@ import About from "./component/Files/About";
 import Home from "./component/Files/Home";
 import Footer from "./component/Layout/Footer";
 import Store from "./component/Files/Store";
-import ApiStore from "./component/Files/StoreAPI"
+import ApiStore from "./component/StoreAPI/StoreAPI"
+import ContactUs from "./component/ContactUs/StoreContact";
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -29,6 +30,7 @@ function App() {
           {" "}<Route path="/" element={<Home />} />
           {" "}<Route path="/store" element={<Store />} />
           {" "}<Route path="/api-store" element={<ApiStore />} />
+          {" "}<Route path="/contactus" element={<ContactUs />} />
         </Routes>
         <Footer />
       </CartProvider>
