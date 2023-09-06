@@ -11,6 +11,12 @@ import Footer from "./component/Layout/Footer";
 import Store from "./component/Files/Store";
 import ApiStore from "./component/StoreAPI/StoreAPI"
 import ContactUs from "./component/ContactUs/StoreContact";
+import ProductDetails from "./component/Files/ProductDetails";
+import Products from "./component/Files/Products";
+import ItemDetails from "./component/Items/FormItems/ItemDetails";
+import Auth from "./pages/AuthPage";
+import UserProfile from "./pages/ProfilePage";
+
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -25,12 +31,18 @@ function App() {
       <CartProvider>
         {cartIsShown && <Cart onHideCart={HideCartHandler} />}
         <Nav onShowCart={showCartHandler} />
-        <Routes>
+        <Routes> 
           {" "}<Route path="/about" element={<About />} />
           {" "}<Route path="/" element={<Home />} />
+          {" "}<Route path="/auth" element={<Auth />} />
+          {" "}<Route path="/profile" element={<UserProfile />} />
+          {" "}<Route path="/product" element={<Home />} />
+          {" "}<Route path="/product/:itemKey" element={<ItemDetails />} />
           {" "}<Route path="/store" element={<Store />} />
           {" "}<Route path="/api-store" element={<ApiStore />} />
           {" "}<Route path="/contactus" element={<ContactUs />} />
+          {" "}<Route path="/products" element={<Products />} />
+          {" "}<Route path="/products/:productId" element={<ProductDetails />} />
         </Routes>
         <Footer />
       </CartProvider>

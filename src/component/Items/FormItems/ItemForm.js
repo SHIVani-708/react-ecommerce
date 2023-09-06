@@ -35,9 +35,10 @@ const ItemForm = (props) => {
           min: "0",
           max: "5",
           step: "1",
-          value: enteredAmount, // Use the enteredAmount state here
+          defaultValue: enteredAmount, // Use the enteredAmount state here
         }}
         onChange={(event) => setEnteredAmount(event.target.value)} // Update enteredAmount on input change
+        
       />
       <button
         onClick={() =>
