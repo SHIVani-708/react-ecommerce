@@ -3,12 +3,10 @@
     width: 100%;
     background-color: black;
     color: white;
-    justify-content: space-around;
 }
 .navbar-brand{
     color: white;
     font-size: 25px;
-    margin-left: -25px;
 }
 .navbar-brand:hover{
     font-size: 30px;
@@ -38,4 +36,13 @@
     font-size: 22px;
     font-weight: 600;
     background-color: yellowgreen;
+}
+
+button{
+    font-size: 20px;
+    background-color: gray;
+    color: white;
+    border-radius: 1rem;
+    padding: 6px;
+    margin: 6px;
 }

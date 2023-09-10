@@ -7,11 +7,10 @@
     color: white;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
-    scroll-behavior: smooth;
+    right: 0; */
 }
 
 .f-text {
