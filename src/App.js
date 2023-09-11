@@ -1,4 +1,4 @@
-import {useState } from "react";
+import {useContext, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Import BrowserRouter, Routes, and Route
 import "./App.css";
@@ -16,10 +16,12 @@ import Products from "./component/Files/Products";
 import ItemDetails from "./component/Items/FormItems/ItemDetails";
 import Auth from "./pages/AuthPage";
 import UserProfile from "./pages/ProfilePage";
+import AuthContext from "./store/auth-context";
 
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
+  const authCtx=useContext(AuthContext);
   const showCartHandler = () => {
     setCartIsShown(true);
   };
@@ -32,17 +34,18 @@ function App() {
         {cartIsShown && <Cart onHideCart={HideCartHandler} />}
         <Nav onShowCart={showCartHandler} />
         <Routes> 
-          {" "}<Route path="/about" element={<About />} />
-          {" "}<Route path="/" element={<Home />} />
-          {" "}<Route path="/auth" element={<Auth />} />
-          {" "}<Route path="/profile" element={<UserProfile />} />
-          {" "}<Route path="/product" element={<Home />} />
-          {" "}<Route path="/product/:itemKey" element={<ItemDetails />} />
-          {" "}<Route path="/store" element={<Store />} />
-          {" "}<Route path="/api-store" element={<ApiStore />} />
-          {" "}<Route path="/contactus" element={<ContactUs />} />
-          {" "}<Route path="/products" element={<Products />} />
-          {" "}<Route path="/products/:productId" element={<ProductDetails />} />
+           <Route path="/auth" element={<Auth />} />
+           {authCtx.isLoggedIn && <Route path="/about" element={<About />} />}
+           <Route path="/" element={<Home />} />
+           {authCtx.isLoggedIn && <Route path="/profile" element={<UserProfile />} />}
+           {authCtx.isLoggedIn && <Route path="/product" element={<Home />} />}
+           {authCtx.isLoggedIn && <Route path="/product/:itemKey" element={<ItemDetails />} />}
+           {authCtx.isLoggedIn && <Route path="/store" element={<Store />} />}
+           {authCtx.isLoggedIn && <Route path="/api-store" element={<ApiStore />} />}
+           {authCtx.isLoggedIn && <Route path="/contactus" element={<ContactUs />} />}
+           {authCtx.isLoggedIn && <Route path="/products" element={<Products />} />}
+           {authCtx.isLoggedIn && <Route path="/products/:productId" element={<ProductDetails />} />}
+           <Route path="*" element={<Home/>}/>
         </Routes>
         <Footer />
       </CartProvider>
