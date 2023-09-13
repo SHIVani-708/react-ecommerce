@@ -13,7 +13,6 @@ import ApiStore from "./component/StoreAPI/StoreAPI"
 import ContactUs from "./component/ContactUs/StoreContact";
 import ProductDetails from "./component/Files/ProductDetails";
 import Products from "./component/Files/Products";
-import ItemDetails from "./component/Items/FormItems/ItemDetails";
 import Auth from "./pages/AuthPage";
 import UserProfile from "./pages/ProfilePage";
 import AuthContext from "./store/auth-context";
@@ -39,7 +38,7 @@ function App() {
            <Route path="/" element={<Home />} />
            {authCtx.isLoggedIn && <Route path="/profile" element={<UserProfile />} />}
            {authCtx.isLoggedIn && <Route path="/product" element={<Home />} />}
-           {authCtx.isLoggedIn && <Route path="/product/:itemKey" element={<ItemDetails />} />}
+          
            {authCtx.isLoggedIn && <Route path="/store" element={<Store />} />}
            {authCtx.isLoggedIn && <Route path="/api-store" element={<ApiStore />} />}
            {authCtx.isLoggedIn && <Route path="/contactus" element={<ContactUs />} />}

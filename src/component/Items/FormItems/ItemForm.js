@@ -4,7 +4,7 @@ import Input from "../../UI/Input";
 
 const ItemForm = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true);
-  const [enteredAmount, setEnteredAmount] = useState('0');  // Initialize with '1'
+  const [enteredAmount, setEnteredAmount] = useState('1');  // Initialize with '1'
   const amountInputRef = useRef();
 
   const submitHandler = (event) => {

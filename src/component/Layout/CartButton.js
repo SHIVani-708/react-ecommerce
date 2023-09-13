@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 import { Navigate } from 'react-router-dom';
 import AuthContext from "../../store/auth-context";
 
-export default function CartButton() {
+export default function CartButton(props) {
   const cartctx = useContext(CartContext);
   const authCtx=useContext(AuthContext);
   const numberofCartItem = cartctx.items.reduce((currNum, item) => {
@@ -47,9 +47,6 @@ export default function CartButton() {
         Add to Cart
         <span id="count">{numberofCartItem}</span>
       </Button>)}
-     
-     
-      
     </Fragment>
   );
 }

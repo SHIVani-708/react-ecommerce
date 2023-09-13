@@ -5,7 +5,7 @@ import CartButton from "./CartButton";
 import { Link } from "react-router-dom";
 import AuthContext from "../../store/auth-context";
 
-export default function Nav() {
+export default function Nav(props) {
   const authCtx = useContext(AuthContext);
   const isLoggedIn = authCtx.isLoggedIn;
 
@@ -32,7 +32,7 @@ export default function Nav() {
       </div>
       )}
       <div>
-        <CartButton />
+        <CartButton  onClick={props.onShowCart} />
       </div>
     </Navbar>
   );
