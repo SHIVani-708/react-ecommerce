@@ -7,6 +7,7 @@ import CartContext from '../Store/CartContext'
 
 
 const Cart = (props) => {
+  console.log('Cart.js executed');
   const cartCtx = useContext(CartContext);
 
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;

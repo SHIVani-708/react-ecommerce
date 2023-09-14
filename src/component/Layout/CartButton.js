@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"; // Import the cart icon
@@ -22,7 +22,7 @@ export default function CartButton(props) {
     }
   }
   return (
-    <Fragment>
+    <div>
       {!isLoggedIn && ( <Link to="/auth"> 
      <button>
         Login
@@ -42,11 +42,11 @@ export default function CartButton(props) {
       </button>
      </Link>)}
 
-     {isLoggedIn && (<Button variant="dark" className="cart">
+     {isLoggedIn && (<Button variant="dark" className="cart" onClick={props.onClickCart}>
         <FontAwesomeIcon icon={faShoppingCart} />
         Add to Cart
         <span id="count">{numberofCartItem}</span>
       </Button>)}
-    </Fragment>
+    </div>
   );
 }

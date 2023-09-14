@@ -32,7 +32,7 @@ export default function Nav(props) {
       </div>
       )}
       <div>
-        <CartButton  onClick={props.onShowCart} />
+        <CartButton  onClickCart={props.onShowCart} />
       </div>
     </Navbar>
   );

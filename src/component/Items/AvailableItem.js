@@ -33,8 +33,8 @@ export default function AvailableItem() {
         {cartElements.map((item, index) => (
           <ItemList
             key={index}
-            itemKey={index + 1}
-            title={item.title}
+            id={index + 1}
+            name={item.title}
             price={item.price}
             img={item.imageUrl}
             quantity={item.quantity}
